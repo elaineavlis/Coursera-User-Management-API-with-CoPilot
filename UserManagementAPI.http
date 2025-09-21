@@ -1,0 +1,34 @@
+@baseUrl = http://localhost:5133
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVGVzdFVzZXIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsIm5iZiI6MTc1ODQ0OTM2MiwiZXhwIjoxNzg5OTg1MzYyLCJpc3MiOiJURVNUIiwiYXVkIjoiVEVTVCJ9.yGiBkFTDjqhK15fh7wv_CDS2I0f-SdxCh8BfNuA1oYI
+
+### 🔍 GET all users
+GET {{baseUrl}}/users
+Authorization: Bearer {{token}} 
+
+### 🔍 GET user by ID
+GET {{baseUrl}}/users/1
+Authorization: Bearer {{token}}
+
+### ➕ POST new user
+POST {{baseUrl}}/users
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "username": "neueruser",
+  "email": "neuer@example.com"
+}
+
+### ✏️ PUT update user
+PUT {{baseUrl}}/users/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "username": "aktualisiert",
+  "email": "aktualisiert@example.com"
+}
+
+### 🗑 DELETE user
+DELETE {{baseUrl}}/users/1
+Authorization: Bearer {{token}}
